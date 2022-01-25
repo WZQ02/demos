@@ -17,7 +17,7 @@
             transition: 0.25s;
         }
         #title {
-            text-align: center;
+        	text-align: center;
             font-weight: bold;
             font-size: 32px;
             animation: appear 0.4s cubic-bezier(0, 0.67, 0, 1) 1;
@@ -30,6 +30,17 @@
             animation: appear 0.6s ease 1;
             color: #DFDFDF;
         }
+        #links {
+        	text-align: center;
+        }
+        #links a {
+            font-weight: bold;
+            font-size: 24px;
+            animation: appear 0.4s cubic-bezier(0, 0.67, 0, 1) 1;
+            color: #454545;
+            text-decoration: none;
+            line-height: 200%;
+        }
         @media (prefers-color-scheme: dark) {
             body { 
                 background: #252525; 
@@ -40,22 +51,15 @@
             #largetitle {
                 color: #414141;
             }
+            #links a {
+            	color: #AAA;
+        	}
         }
         @keyframes appear {
             0% {
                 opacity: 0.0;
             }
             100% {
-                opacity: 1.0;
-            }
-        }
-        @keyframes drop {
-            0% {
-                top: -300px;
-                opacity: 0.0;
-            }
-            100% {
-                top: 0px;
                 opacity: 1.0;
             }
         }
@@ -72,7 +76,11 @@
 <body>
     <div class="wel">
         <div id="largetitle">Under Construction...</div>
-        <div id="title">这个页面啥都没有。</div>
+        <div id="title">&nbsp;&nbsp;这个页面啥都没有。<br><br></div>
+        <div id="links">
+        	<a href="/blog/">→ 前往 wzq02 的个人博客 (已迁址)<br></a>
+        	<a href="https://wzq02.tk/">→ 前往 wzq02.tk</a>
+        </div>
     </div>
 </body>
 </html>
