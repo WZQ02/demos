@@ -20,14 +20,14 @@
         	text-align: center;
             font-weight: bold;
             font-size: 32px;
-            animation: appear 0.4s cubic-bezier(0, 0.67, 0, 1) 1;
+            animation: appear 2s cubic-bezier(0, 0.67, 0, 1) 1;
             color: #787878;
         }
         #largetitle {
             text-align: center;
             font-weight: bold;
             font-size: 192px;
-            animation: appear 0.6s ease 1;
+            animation: appear 1.2s ease 1;
             color: #DFDFDF;
         }
         #links {
@@ -36,7 +36,7 @@
         #links a {
             font-weight: bold;
             font-size: 24px;
-            animation: appear 0.4s cubic-bezier(0, 0.67, 0, 1) 1;
+            animation: appear 2s cubic-bezier(0, 0.67, 0, 1) 1;
             color: #454545;
             text-decoration: none;
             line-height: 200%;
@@ -78,9 +78,34 @@
         <div id="largetitle">Under Construction...</div>
         <div id="title">&nbsp;&nbsp;这个页面啥都没有。<br><br></div>
         <div id="links">
-        	<a href="/blog/">→ 前往 wzq02 的个人博客 (已迁址)<br></a>
-        	<a href="https://wzq02.tk/">→ 前往 wzq02.tk</a>
+        	<a href="javascript:void(0)" onclick="to1()">→ 前往 wzq02 的个人博客 (已迁址)<br></a>
+        	<a href="javascript:void(0)" onclick="to2()">→ 前往 wzq02.tk</a>
         </div>
     </div>
+<script type="text/javascript">
+	var tit = document.getElementById("title");
+	var ltit = document.getElementById("largetitle");
+	var links = document.getElementById("links");
+
+	function to1() {
+		window.location.href = "/blog/";
+		cleartitle();
+		whitebg();
+	}
+	function to2() {
+		window.location.href = "https://wzq02.tk/";
+		cleartitle();
+	}
+	function cleartitle() {
+    	clear = [tit,ltit,links];
+    	clear.forEach(function(i){
+    		i.style.transition = "0.25s";
+            i.style.opacity = "0.0";
+    	})
+    }
+    function whitebg() {
+    	document.body.background = "#FFF";
+    }
+</script>
 </body>
 </html>
